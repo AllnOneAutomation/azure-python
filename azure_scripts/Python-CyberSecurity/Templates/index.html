@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ENG">
+<head>
+    <title>Azure VM Security Settings</title>
+</head>
+<body>
+    <h1>Azure VM Security Settings</h1>
+    <form method="POST" action="/apply_settings">
+        <label for="client_id">Client ID:</label>
+        <input type="text" id="client_id" name="client_id" required><br><br>
+
+        <label for="client_secret">Client Secret:</label>
+        <input type="password" id="client_secret" name="client_secret" required><br><br>
+
+        <label for="tenant_id">Tenant ID:</label>
+        <input type="text" id="tenant_id" name="tenant_id" required><br><br>
+
+        <label for="vm_name">VM Name:</label>
+        <input type="text" id="vm_name" name="vm_name" required><br><br>
+
+        <label for="subscription_id">Subscription ID:</label>
+        <input type="text" id="subscription_id" name="subscription_id" required><br><br>
+
+        <label for="resource_group_name">Resource Group Name:</label>
+        <input type="text" id="resource_group_name" name="resource_group_name" required><br><br>
+
+        <!-- Checkboxes for selecting settings -->
+        <label>Select Security Settings:</label><br>
+        <label>
+            <input type="checkbox" name="settings" value="disablerdp">
+        </label> Disable RDP<br>
+        <label>
+            <input type="checkbox" name="settings" value="disablehttps">
+        </label> Disable HTTPS<br>
+
+        <input type="submit" value="Apply Settings">
+    </form>yes
+</body>
+</html>
