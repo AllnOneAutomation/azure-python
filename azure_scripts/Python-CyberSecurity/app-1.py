@@ -123,11 +123,11 @@ def check_and_disable_rdp(vm_name, subscription_id, resource_group_name, client_
             print(f"NSG '{nsg.name}' is not connected to VM '{vm_name}'")
 
 # Example usage
-vm_name = "SecOps-VM"
-subscription_id = "8c4808ef-12ad-4d59-93b5-7bf387edcea8"
-resource_group_name = "CyberSecurity-RG"
-client_id = "db1312e5-0a81-472a-871e-b9f22c0dc334"
-client_secret = "Htc8Q~hdTu4dSjyW-n4ldUP26O9Z9T8CwPjlWcxZ"
-tenant_id = "45d9f7c5-0915-455f-846a-214c5c7c6894"
+vm_name = ""
+subscription_id = ""
+resource_group_name = ""
+client_id = ""
+client_secret = ""
+tenant_id = ""
 
 check_and_disable_rdp(vm_name, subscription_id, resource_group_name, client_id, client_secret, tenant_id)
