@@ -1,39 +1,98 @@
 <!DOCTYPE html>
 <html lang="ENG">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azure VM Security Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056a3;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Azure VM Security Settings</h1>
     <form method="POST" action="/apply_settings">
         <label for="client_id">Client ID:</label>
-        <input type="text" id="client_id" name="client_id" required><br><br>
+        <input type="text" id="client_id" name="client_id" required>
 
         <label for="client_secret">Client Secret:</label>
-        <input type="password" id="client_secret" name="client_secret" required><br><br>
+        <input type="password" id="client_secret" name="client_secret" required>
 
         <label for="tenant_id">Tenant ID:</label>
-        <input type="text" id="tenant_id" name="tenant_id" required><br><br>
+        <input type="text" id="tenant_id" name="tenant_id" required>
 
         <label for="vm_name">VM Name:</label>
-        <input type="text" id="vm_name" name="vm_name" required><br><br>
+        <input type="text" id="vm_name" name="vm_name" required>
 
         <label for="subscription_id">Subscription ID:</label>
-        <input type="text" id="subscription_id" name="subscription_id" required><br><br>
+        <input type="text" id="subscription_id" name="subscription_id" required>
 
         <label for="resource_group_name">Resource Group Name:</label>
-        <input type="text" id="resource_group_name" name="resource_group_name" required><br><br>
+        <input type="text" id="resource_group_name" name="resource_group_name" required>
 
         <!-- Checkboxes for selecting settings -->
-        <label>Select Security Settings:</label><br>
-        <label>
-            <input type="checkbox" name="settings" value="disablerdp">
-        </label> Disable RDP<br>
-        <label>
-            <input type="checkbox" name="settings" value="disablehttps">
-        </label> Disable HTTPS<br>
+        <div class="checkbox-group">
+            <label>Select Security Settings:</label>
+            <label>
+                <input type="checkbox" name="settings" value="disablerdp">
+                Disable RDP
+            </label>
+            <label>
+                <input type="checkbox" name="settings" value="disablehttps">
+                Disable HTTPS
+            </label>
+        </div>
 
         <input type="submit" value="Apply Settings">
-    </form>yes
+    </form>
 </body>
 </html>
